@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Rajan Dehiri – Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <style>
+    /* RESET */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #f6f6f4;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+      color: #111;
+    }
+
+    /* STICKY HEADER FRAME (like a Figma frame) */
+    .header-shell {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(8px);
+      background: rgba(246, 246, 244, 0.95);
+      border-bottom: 1px solid #ddd9cf;
+    }
+
+    /* HEADER CONTENT */
+    header {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .header-inner {
+      padding: 10px 10px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.95rem;
+    }
+
+    .header-inner a {
+      text-decoration: none;
+      color: inherit;
+      opacity: 0.75;
+    }
+
+    .header-inner a:hover {
+      opacity: 1;
+    }
+
+    /* left: name + role */
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+      flex-shrink: 0;
+      margin-right: auto;
+    }
+
+    /* middle: links */
+    .header-links {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+    }
+
+    /* right: button */
+    .header-right {
+      flex-shrink: 0;
+    }
+
+    .download-btn {
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid #111;
+      font-size: 0.85rem;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    /* text swap for button */
+    .label-mobile {
+      display: none;
+    }
+
+    /* PROGRESS TRACK + BAR */
+    .progress-track {
+      height: 3px;
+      max-width: 1400px;
+      margin: 0 auto;
+      background: transparent;
+    }
+
+    #progress {
+      height: 3px;
+      width: 0;
+      background: #0a84ff; /* Apple-ish blue */
+    }
+
+    /* MOBILE LAYOUT */
+    @media (max-width: 640px) {
+      .header-inner {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        row-gap: 4px;
+        align-items: center;
+      }
+
+      .header-left {
+        margin-right: 0;
+      }
+
+      .header-links {
+        grid-column: 1 / 2;
+        font-size: 0.9rem;
+        flex-wrap: wrap;
+      }
+
+      .header-right {
+        grid-column: 2 / 3;
+        grid-row: 1 / span 2;
+        justify-self: end;
+      }
+
+      .download-btn {
+        font-size: 0.85rem;
+        padding: 6px 12px;
+      }
+
+      /* swap text: Download PDF -> PDF */
+      .label-desktop {
+        display: none;
+      }
+      .label-mobile {
+        display: inline;
+      }
+    }
+
+    /* MAIN CONTENT */
+    .wrapper {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 20px 10px 60px;
+    }
+
+    .page-image {
+      width: 100%;
+      display: block;
+      margin: 0 auto 0px;
+      /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10); */
+      border-radius: 0px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- STICKY FRAME: HEADER + PROGRESS BAR -->
+  <div class="header-shell">
+
+    <header>
+      <div class="header-inner">
+
+        <!-- Left: Name + Role -->
+        <div class="header-left">
+          <strong>Rajan Dehiri</strong>
+          <span>· Experience Design</span>
+        </div>
+
+        <!-- Links -->
+        <div class="header-links">
+          <a href="mailto:rdehiri@gmail.com">Email</a> ·
+          <a href="https://www.linkedin.com/in/rajan-dehiri/" target="_blank" rel="noopener noreferrer">
+            LinkedIn
+          </a>
+        </div>
+
+        <!-- Button -->
+        <div class="header-right">
+          <a
+            href="Rajan-Portfolio.pdf"
+            download
+            target="_blank"
+            rel="noopener noreferrer"
+            class="download-btn"
+          >
+            <span class="label-desktop">Download PDF</span>
+            <span class="label-mobile">PDF</span>
+          </a>
+        </div>
+
+      </div>
+    </header>
+
+    <!-- Progress track + bar under header -->
+    <div class="progress-track">
+      <div id="progress"></div>
+    </div>
+
+  </div>
+
+  <!-- CONTENT -->
+  <div class="wrapper">
+    <img src="images/01-cover.png" class="page-image" />
+    <img src="images/02-journey.png" class="page-image" />
+    <img src="images/03-highlights.png" class="page-image" />
+    <img src="images/04-bid-hero.png" class="page-image" />
+    <img src="images/05-bid-research.png" class="page-image" />
+    <img src="images/06-bid-blueprint.png" class="page-image" />
+    <img src="images/07-bid-wireframes.png" class="page-image" />
+    <img src="images/08-bid-mockups.png" class="page-image" />
+    <img src="images/09-apm-hero.png" class="page-image" />
+    <img src="images/10-apm-research.png" class="page-image" />
+    <img src="images/11-apm-sitemap.png" class="page-image" />
+    <img src="images/12-apm-mockups.png" class="page-image" />
+    <img src="images/13-logofolio.png" class="page-image" />
+    <img src="images/14-kannans.png" class="page-image" />
+    <img src="images/15-chimecare.png" class="page-image" />
+    <img src="images/16-thankyou.png" class="page-image" />
+  </div>
+
+  <!-- JS: Scroll progress -->
+  <script>
+    const progressBar = document.getElementById('progress');
+
+    window.addEventListener('scroll', () => {
+      const doc = document.documentElement;
+      const scrollTop = doc.scrollTop || document.body.scrollTop;
+      const scrollHeight = doc.scrollHeight - doc.clientHeight;
+      const scrolled = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+      progressBar.style.width = scrolled + '%';
+    });
+  </script>
+
+</body>
+</html>
